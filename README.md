@@ -2,15 +2,15 @@
 
 A list of common GPG commands.
 
-## Install
+# Install
 
 ### Using Homebrew
 
 ```brew install gnupg```
 
-## Commands
+# Commands
 
-### Setup & Key Management
+## Setup & Key Management
 
 #### Create GPG key
 ```gpg --gen-key```
@@ -38,7 +38,7 @@ quit
 
 ```
 
-### Encryption & Decryption
+## Encryption & Decryption
 
 #### Encrypt a file
 ```gpg --encrypt --recipient [email or username] [filename.txt]```
@@ -83,7 +83,7 @@ Omit *--decrypt* if the file is a binary file.
 #### Verify with detached signature
 ```gpg --verify doc.sig doc.txt```
 
-## Configuration
+# Configuration
 
 #### Create groups of people in your configuration file
 GPG software configuration is stored in your home directory at **~/.gnupg/gpg.conf**.
@@ -92,7 +92,7 @@ You list the members of a group by some attribute of their public key found in y
 
 ```group spies = nick, steve, chris```
 
-## Sources
+# Sources
 
 [http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/](http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/)
 [https://www.gnupg.org/gph/en/manual/x135.html](https://www.gnupg.org/gph/en/manual/x135.html)
