@@ -28,7 +28,7 @@ A list of common GPG commands.
 ```gpg --list-secret-keys```
 
 #### Trust a public key
-``` 
+```
 gpg --edit-key [email or username]
 
 trust (invoke trust command on the key)
@@ -82,6 +82,15 @@ Omit *--decrypt* if the file is a binary file.
 
 #### Verify with detached signature
 ```gpg --verify doc.sig doc.txt```
+
+# GPG Agent usage
+The GPG agent will act as a cache for your private key. It's a daemon that runs on your machine in the background. Should be started as a system service during boot.
+
+To interact with the agent there is the command ```gpg-connect-agent```. That opens a command line interface like Telnet to the agent where you can issue commands and the agent will answer.
+
+### List currently loaded keys
+```gpg-connect-agent 'keyinfo --list' /bye```
+
 
 # Configuration
 
