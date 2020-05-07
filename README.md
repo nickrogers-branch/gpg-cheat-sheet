@@ -86,6 +86,8 @@ Omit *--decrypt* if the file is a binary file.
 # GPG Agent usage
 The GPG agent will act as a cache for your private key. It's a daemon that runs on your machine in the background. Should be started as a system service during boot.
 
+To interact with the agent there is the command ```gpg-connect-agent```. That opens a command line interface like Telnet to the agent where you can issue commands and the agent will answer.
+
 ### List currently loaded keys
 ```gpg-connect-agent 'keyinfo --list' /bye```
 
